@@ -1,0 +1,323 @@
+@media screen and (min-width: 480px) {
+	body {
+	  background-color: lightgreen;
+	}
+  }
+
+
+/* id related */
+#serious_text{
+	font-family: sans;
+	font-size: 40px;
+	text-align: center;
+}
+#fake_stamp{
+	-ms-transform: rotate(-35deg);
+	-webkit-transform: rotate(-35deg);
+	transform: rotate(-35deg);
+	translate: 100px 400px;
+
+	width: 200px;
+}
+#index_aliginer{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	justify-content: space-evenly;
+}
+
+/* speical id related */
+#currentpage{
+	background-color: #e0e0bb;	
+}
+#project_01{
+}
+
+#vidDemo_bkgrd_img{
+}
+header{
+	background-color: black;
+	height: 40px;
+	margin-left: -8px;
+	margin-right: -8px;
+	margin-bottom: 0px;
+}
+body{
+	background-color: #e0e0bb;
+	overflow-x:hidden;
+}
+
+
+/* Navigation related */
+nav{
+	display:grid;
+	grid-template-columns: auto auto auto auto auto;
+	grid-template-rows: auto;
+	margin-top: -8px;
+}
+a{
+	text-decoration: none ;
+	background-color: #b5b5a3;
+	border-radius: 15px 15px 0px 0px;
+	margin-left: 9px;
+	margin-right: 9px;
+	height: 40px;
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	font-size: 22px;
+	color: black;
+}
+a:hover{
+	background-color: green;	
+}
+a:link{
+	text-decoration: none;
+}
+
+/* Text related Class */
+.center_text{
+	text-align: center;
+}
+.document_text{
+	background-image: url('images/paper_texture.jpg');
+	padding: 4%;
+	border-color: black;
+	margin: 2%;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 7px;
+}
+.report_document{
+	background-color: white;
+	padding: 4%;
+	border-color: black;
+	margin: 2%;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 7px;	
+	
+	
+}
+
+
+
+/* Image related Class*/
+.polaroid{
+	margin:5px 500px 10px 30px;
+	border-style: solid;
+	border-color: white;
+	border-width: 10px;
+	border-bottom-width: 50px;
+	border-radius: 6px;
+	outline-style: solid;
+	outline-width: 2px;
+
+
+
+}
+.evidence{
+	/* dis is for long screen shots */
+	margin:5px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	border-radius: 1px;
+	outline-style: solid;
+	outline-width: 2px;	
+}
+.imgwarpper{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	justify-content: space-evenly;
+}
+
+/* Portfolio page Special Class */
+.Dossier_Gallery{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto;	
+	justify-content: space-around;
+	
+	margin-top: 20px; 
+	margin-bottom: 40px;
+	
+}
+.Dossier{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 50px auto auto auto 50px;	
+	
+	height: 490px;
+	width: 300px;
+	background-color: #eaead7; 
+	
+	text-align: center;
+	
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.Dossier_documentation_modal{
+
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+
+
+}
+.Dossier_documentation_content{
+	display:none;
+	position: fixed;
+	background-color: yellow;
+	height: 80%;
+	width: auto;	
+}
+
+.Dossier:hover{
+	background-color: #d5d5c6;
+	
+	-ms-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	transform: rotate(5deg);	
+}
+
+/* Vid_demo page Special Class */
+.vidDemo_player{
+
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	justify-content: space-evenly;
+	text-align: center;
+	
+	height: 260px;
+	width: 405px;
+	
+	background-color: black;
+
+	translate: 0px 48px;
+}
+.Video_container{
+
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	justify-content: space-evenly;
+	text-align: center;
+
+	height: 500px;
+	width: auto;
+	
+	background-image: url(images/vHS_player.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 650px 500px;
+}
+.fake_table{
+	background-image: url('images/table_planks.jpg');
+	margin: 20 px;
+	margin-bottom: -7px;
+	height: 400px;
+}
+
+
+/* Contact page Special Class */
+.contactLayout{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto;
+	justify-content: space-evenly;	
+	padding: 20px;
+}
+
+.Business_Card_container{
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+
+
+}
+
+.Business_Card_item{
+	background-color: #ffffd5;
+	padding: 10px;
+	height: 220px;
+	width: 400px;
+	margin: 20px;
+	border-radius: 12px;
+}
+
+.Email_contact_container{
+	background-image: url('images/clip_board.png');
+	background-size: 700px 800px;
+	background-repeat: no-repeat;
+
+
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	justify-content: center;
+}
+.Email_contact_item{
+	
+	height: 600px;
+	width: 500px;
+	align-self: center;
+	margin-top: 100px;
+	
+	padding: 50px;
+}
+
+
+/* Site report Speical Classes */
+.siteReportLayout{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto;
+	justify-content: space-evenly;
+}
+.starting_point{
+	background-color: #f4f2e4;
+	padding: 2.5%;
+	border-color: black;
+	margin: 2%;
+	border-radius: 5px;	
+}
+
+
+/* Supporting Special Class */
+body button{
+	background-color: 0 0 0 0%;
+	height: 20%;
+	width: 50%;
+}
+.buttonX{
+	float: right;
+	font-size: 40px;
+}
+.bodyNav_Div{
+	margin-left: -7px;
+	margin-right: -7px;
+	height:40px;
+}
+.noUnderline{
+	text-decoration: none;
+}
+
+
+/* misc */
+footer {
+	background-color: gray;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	padding: 5px;
+	padding-top: 30px;
+	margin: -8px;
+}
