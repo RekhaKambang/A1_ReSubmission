@@ -28,9 +28,13 @@
 #currentpage{
 	background-color: #e0e0bb;	
 }
+html{
+	height: 100%;
+}
+
 
 header{
-	background-color: black;
+	background-color: #97805d;
 	height: 40px;
 	margin-left: -8px;
 	margin-right: -8px;
@@ -39,6 +43,7 @@ header{
 body{
 	background-color: #e0e0bb;
 	overflow-x:hidden;
+	min-height: 100%;
 }
 
 
@@ -50,7 +55,7 @@ nav{
 	margin-top: -8px;
 }
 a{
-	text-decoration: none ;
+	text-decoration: none;
 	background-color: #b5b5a3;
 	border-radius: 15px 15px 0px 0px;
 	margin-left: 9px;
@@ -64,12 +69,29 @@ a{
 	color: black;
 }
 a:hover{
-	background-color: green;	
+	background-color: rgb(201, 174, 129);	
 }
 a:link{
 	text-decoration: none;
 }
 
+.linkedCorrection{
+	background-color: transparent;
+	border-radius: 0px 0px 0px 0px;
+	margin-left: 0;
+	margin-right: 0;
+	height: auto;
+
+	text-align: none;
+	vertical-align: none;
+	line-height: 0px;
+	font-size: 16px;
+	color: blue;
+}
+
+.linkedCorrection:link{
+	text-decoration: underline;
+}
 /* Text related Class */
 .center_text{
 	text-align: center;
@@ -94,8 +116,6 @@ a:link{
 	
 	
 }
-
-
 
 /* Image related Class*/
 .polaroid{
@@ -320,7 +340,6 @@ a:link{
 	text-decoration: none;
 }
 
-
 /* misc */
 footer {
 	background-color: gray;
@@ -332,45 +351,83 @@ footer {
 	margin: -8px;
 }
 
-/* for really tiny screen devices */
-@media (max-width: 575px){
-	body{
-		background-color: black;
+/* Resposive menu/Media query handlers related*/
+
+input[type=checkbox] {
+    display: none;
+  } 
+  
+.hamburging {
+    display: none;
   }
-  body header nav{
-	  display: none;
-  }
-}
+
+
 
 /* Phone sizes*/
-@media (min-width: 576px) { 
-		body{
-			background-color: yellow;
-	  }
-	  body header nav{
-		  display: none;
-	  }
+@media (min-width: 48em) and (orientation: portrait) { 
+
+	/* NAV RELATED CHANGES */
+	header {
+	background-color: rgb(72, 86, 212);
+	color: white
+}
+	.hamburging{
+		display: block;
+		float: right;
+		padding: 3px;
+	}
+a{
+	text-decoration: none;
+	background-color: rgb(72, 86, 212);
+	border-radius: 0px 0px 0px 0px;
+	margin-left: 9px;
+	margin-right: 9px;
+	height: 40px;
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	font-size: 60px;
+	color: white;
+	padding: 0.5em;
+}
+#currentpage{
+	background-color: rgb(54, 65, 163);
+}
+  nav{
+	display: none;
+  }
+  header{
+	position: relative;
+	z-index: 100;
+	height: 2em;
+	font-size: 70px;
+  }
+  input[type=checkbox]:checked ~ .mainMenu {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto auto;
+	position: relative;
+	z-index: 100;
+	transform: translateY(7vh);
+
+  }
+
+
+
+  .bodyNav_Div{
+	display: none;
+  }
+	
+  /* sitereport HTML RELATED */
+	.siteReportLayout{
+		display: grid;
+		grid-template-columns: auto;
+		grid-auto-rows: auto auto ;
+		grid-auto-columns: min-content;
+		overflow: auto-fit;
+		justify-content: space-evenly;
 	}
 
-	
-/* tablet sizes */
-@media (min-width: 768px) {
-	body{
-		background-color: blue;
-  }
-  body header nav{
-	  display: none;
-  } 
 }
-
-
-/* Desktop sizes */
-@media (min-width: 992px) { 	
-	body{
-		background-color: green;
-  }
-  body header nav{
-	display: grid;
-	} 
-} 
-
+/* unchecked validation */
