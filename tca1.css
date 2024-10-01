@@ -19,7 +19,7 @@
 	justify-content: space-evenly;
 }
 #red_band{
-	background-color: #d55656;
+	background-color: #ca7575;
 }
 
 /* speical id related */
@@ -28,13 +28,15 @@
 #currentpage{
 	background-color: #e0e0bb;	
 }
+
+
 html{
 	height: 100%;
 }
 
 
 header{
-	background-color: #97805d;
+	background-color: #938673;
 	height: 40px;
 	margin-left: -8px;
 	margin-right: -8px;
@@ -42,10 +44,15 @@ header{
 }
 body{
 	background-color: #e0e0bb;
-	overflow-x:hidden;
-	min-height: 100%;
+	/* overflow-x:hidden; */
+	height: 100%;
+	font-size: 100%;
 }
 
+body > footer {
+	position: sticky;
+	top: 100%;
+  }
 
 /* Navigation related */
 nav{
@@ -82,8 +89,6 @@ a:link{
 	margin-right: 0;
 	height: auto;
 
-	text-align: none;
-	vertical-align: none;
 	line-height: 0px;
 	font-size: 16px;
 	color: blue;
@@ -97,7 +102,7 @@ a:link{
 	text-align: center;
 }
 .document_text{
-	background-image: url('images/paper_texture.jpg');
+	background-image: url('images/paper_texture_v2.jpg');
 	padding: 4%;
 	border-color: black;
 	margin: 2%;
@@ -119,7 +124,7 @@ a:link{
 
 /* Image related Class*/
 .polaroid{
-	margin:5px 500px 10px 30px;
+	margin:5px 10px 30px;
 	border-style: solid;
 	border-color: white;
 	border-width: 10px;
@@ -237,13 +242,13 @@ a:link{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 650px 500px;
-
-	transform: scale(1.1);
 }
 .fake_table{
 	background-image: url('images/table_planks.jpg');
-	margin-bottom: -9px;
-	height: 400px;
+	padding: 2%
+}
+.shadowed{
+	box-shadow: -3px 0px 27px #00000047;
 }
 
 
@@ -277,7 +282,7 @@ a:link{
 	-webkit-transform: rotate(-8deg);
 	transform: rotate(-8deg);
 
-	box-shadow: 10px 10px 20px #6f858c;
+	box-shadow: 3px 3px 9px #6f858c;
 }
 
 .Email_contact_container{
@@ -290,6 +295,7 @@ a:link{
 	grid-template-columns: auto;
 	grid-template-rows: auto;
 	justify-content: center;
+
 }
 .Email_contact_item{
 	
@@ -347,11 +353,10 @@ footer {
 	text-align: center;
 	font-size: 14px;
 	padding: 5px;
-	padding-top: 30px;
-	margin: -8px;
+
 }
 
-/* Resposive menu/Media query handlers related*/
+/* Resposive menu/Media query handlers */
 
 input[type=checkbox] {
     display: none;
@@ -359,75 +364,207 @@ input[type=checkbox] {
   
 .hamburging {
     display: none;
-  }
+}
+
+/* Animation RELATED*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0%;
+		transition: 1s;
+	}
+	100% {
+		opacity: 100%;
+		transition: 1s;
+	}
+
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-500px);
+	}
+	50%{
+
+	}
+	100% {
+		transform: translateY(7vh);
+
+	}
+}
 
 
 
 /* Phone sizes*/
 @media (min-width: 48em) and (orientation: portrait) { 
 
+		/* All pages affecting changes */
+	h1{
+		font-size: 4.5em;
+		word-wrap: break-word;
+	}
+	h3{
+		font-size: 3em;
+		word-wrap: break-word;
+	}
+	p {
+		font-size: 1.2em;
+		word-wrap: break-word;
+	}
+
+
+
 	/* NAV RELATED CHANGES */
 	header {
 	background-color: rgb(72, 86, 212);
 	color: white
-}
+	}
 	.hamburging{
 		display: block;
 		float: right;
 		padding: 3px;
 	}
-a{
-	text-decoration: none;
-	background-color: rgb(72, 86, 212);
-	border-radius: 0px 0px 0px 0px;
-	margin-left: 9px;
-	margin-right: 9px;
-	height: 40px;
+	a {
+		text-decoration: none;
+		background-color: rgb(72, 86, 212);
+		border-radius: 0px 0px 0px 0px;
+		margin-left: 9px;
+		margin-right: 9px;
+		height: 40px;
 
-	text-align: center;
-	vertical-align: middle;
-	line-height: 40px;
-	font-size: 60px;
-	color: white;
-	padding: 0.5em;
-}
-#currentpage{
-	background-color: rgb(54, 65, 163);
-}
-  nav{
-	display: none;
-  }
-  header{
-	position: relative;
-	z-index: 100;
-	height: 2em;
-	font-size: 70px;
-  }
-  input[type=checkbox]:checked ~ .mainMenu {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto auto auto auto auto;
-	position: relative;
-	z-index: 100;
-	transform: translateY(7vh);
+		text-align: center;
+		vertical-align: middle;
+		line-height: 40px;
+		font-size: 60px;
+		color: white;
+		padding: 0.5em;
+	}
+	#currentpage{
+		background-color: rgb(54, 65, 163);
+	}
+	nav{
+		display: none;
+	}
+	header{
+		position: relative;
+		z-index: 100;
+		height: 2em;
+		font-size: 70px;
+	}
+	input[type=checkbox]:checked ~ .mainMenu {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto auto auto;
+		position: relative;
+		z-index: 100;
+		transform: translateY(7vh);
 
-  }
+		animation: slideDown 0.5s;
+	}
+	.bodyNav_Div{
+		display: none;
+	}
 
-
-
-  .bodyNav_Div{
-	display: none;
-  }
-	
-  /* sitereport HTML RELATED */
+		
+	/* sitereport HTML RELATED */
 	.siteReportLayout{
 		display: grid;
 		grid-template-columns: auto;
 		grid-auto-rows: auto auto ;
 		grid-auto-columns: min-content;
-		overflow: auto-fit;
 		justify-content: space-evenly;
+	}
+	.imgwarpper{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* Contact HTML RELATED */
+
+	.contactLayout{
+		display: flex;
+		flex-direction: column;
+	}
+	.Email_contact_container{
+		background-image: url('images/clip_board.png');
+		background-size: 100% 100%;
+		padding: 30%;
+
+	}
+	.Email_contact_item{
+
+		scale: 1.6;
+		font-size: 1.1em;
+	}
+
+	.Business_Card_container{
+		display: flex;
+		justify-content: center;
+		padding: 10%;
+	}
+	.Business_Card_item{
+		scale: 1.5 1.5;
+		background-image: linear-gradient(to top, #6343b9, #80cfd9);
+		padding: 10px;
+		height: 220px;
+		width: 400px;
+		margin: 20px;
+		border-radius: 12px;
+		font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	
+		-ms-transform: rotate(-4deg);
+		-webkit-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+	
+		box-shadow: 10px 10px 20px #6f858c;
+		font-size: 1.1em;
+		line-height: 70%;
+	}
+
+	/* Video demo HTML RELATED*/
+	.Video_container{
+		background-image: none;
+		display: block;
+	}
+	.vidDemo_player{
+		transform: none;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.placeholderVideo{
+		width: 94%;
+		padding: 3%;
+		transform: none;
+	}
+	.fake_table{
+		margin-top: 4em;
+	}
+
+	/* portfolio HTML RELATED*/
+
+	.Dossier_Gallery{
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto auto;
+		
+		align-items: center;
+		justify-items: center;
+	}
+	.Dossier{
+		height: 20em;
+		width: 95%;
+		font-size: xx-large;
+		margin: 0.5em;
+	}
+
+	/* index/homepage HTML RELATED */
+	#fake_stamp{
+		display: none;
+
 	}
 
 }
-/* unchecked validation */
+
+/* passes validation */
